@@ -11,16 +11,16 @@ def calc_idade(ano, mes, dia):
     ja_fez_anos = ((hoje.month, hoje.day) < (mes, dia))
     idade = hoje.year - ano - ja_fez_anos
  
-    print("\nO Utilizador tem ",idade," anos hoje")
+    print("\nVocê tem  atualmente ",idade," anos de idade.")
     
     if idade < 10:
-        print("\nCriança\n")
+        print("\nÉ uma criança,")
     elif idade >= 10 and idade < 18:
-        print("\nAdolescente\n")
+        print("\nÉ um adolescente,")
     elif idade >= 18 and idade < 65:
-        print("\nAdulto\n")
+        print("\nÉ um adulto,")
     elif idade >= 65:
-        print("\nSénior\n")
+        print("\nÉ sénior,")
     else:
         print("\nErro, opção inválida! ")   
              
@@ -31,10 +31,10 @@ def calc_idade(ano, mes, dia):
 
 print("Olá turma do Python!")
 print("Tudo bem!")
-nome: str = input("Qual é a sua data de nascimento?")
+nome: str = input("Qual é o seu nome?")
 print(f"Olá, {nome}!")
 
-print("Qual a sua idade? ") 
+print("Qual sua data de nascimento? ") 
     
 try:
     ano = int(input("Ano: "))
@@ -44,11 +44,11 @@ try:
     idade = calc_idade(ano, mes, dia)   
     
 except ValueError:
-    print("\nErro, insira a data correctamente")
+    print("\nErro, insira a data correctamente.")
     
 if idade < 18:
-    print("Você é menor de idade!\n")
+    print("mas ainda é menor de idade!\n")
 elif idade >= 18:
-    print("Você é maior de idade!\n")
+    print("já é maior de idade!\n")
 else:
     print("\nErro, opção inválida! ")   
