@@ -22,20 +22,33 @@ def calc_idade(ano, mes, dia):
     elif idade >= 65:
         print("\nSénior\n")
     else:
-        print("\nErro, opção inválida! ")        
-    return
+        print("\nErro, opção inválida! ")   
+             
+    return idade
 
+
+ # Início programa   
 
 print("Olá turma do Python!")
 print("Tudo bem!")
-nome: str = input("Qual é o seu nome? ")
+nome: str = input("Qual é a sua data de nascimento?")
 print(f"Olá, {nome}!")
 
-idade = int(input("\Qual a sua idade? "))
-
+print("Qual a sua idade? ") 
+    
+try:
+    ano = int(input("Ano: "))
+    mes = int(input("Mês: "))
+    dia = int(input("Dia: "))
+    
+    idade = calc_idade(ano, mes, dia)   
+    
+except ValueError:
+    print("\nErro, insira a data correctamente")
+    
 if idade < 18:
     print("Você é menor de idade!\n")
 elif idade >= 18:
     print("Você é maior de idade!\n")
 else:
-    print("\nErro, opção inválida! ")     
+    print("\nErro, opção inválida! ")   
